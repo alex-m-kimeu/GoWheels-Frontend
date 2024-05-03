@@ -16,7 +16,7 @@ export default {
         'link': '#646864',
         'h1': '#323432',
         'h2': '#575b57',
-        'p': '#646864',
+        'paragraph': '#646864',
       },
       fontFamily:{
         'body':"Poppins, sans-serif",
