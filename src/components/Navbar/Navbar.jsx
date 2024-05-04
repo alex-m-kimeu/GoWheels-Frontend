@@ -17,7 +17,7 @@ export const Navbar = () => {
         <nav className="flex flex-col lg:flex-row items-center justify-between gap-[10px] lg:gap-0 py-[10px] px-[25px] lg:px-[120px] shadow-md lg:shadow-none">
             <div className="flex justify-between w-full lg:w-auto">
                 <Link to="/">
-                    <img className='w-[90px] md:w-[130px] h-3 md:h-5 hover:cursor-pointer' src={logo} alt="logo" />
+                    <img className='hover:cursor-pointer' src={logo} alt="logo" />
                 </Link>
                 <div className="lg:hidden flex items-center">
                     <button onClick={() => setIsOpen(!isOpen)}>
@@ -31,7 +31,7 @@ export const Navbar = () => {
                         <li key={link.id}>
                             <NavLink
                                 to={link.path}
-                                className='text-sm font-normal text-link hover:text-secondary hover:cursor-pointer'
+                                className='text-sm md:text-[15px] font-normal text-link hover:text-secondary hover:cursor-pointer'
                             >
                                 {link.name}
                             </NavLink>
@@ -42,12 +42,12 @@ export const Navbar = () => {
             <div className={`flex lg:flex-row items-center gap-[80px] lg:gap-[20px] ${isOpen ? 'block' : 'hidden'} lg:flex`}>
                 <Link to="/fleet">
                     <button
-                        className="p-[5px] bg-variant text-primary text-sm font-normal rounded-[5px]">
+                        className="p-[5px] bg-variant text-primary text-sm md:text-[15px] font-normal rounded-[5px]">
                         Rent a Car
                     </button>
                 </Link>
                 <button
-                    className="p-[5px] bg-primary text-link text-sm font-normal border border-variant border-solid rounded-[5px]">
+                    className="p-[5px] bg-primary text-link text-sm md:text-[15px] font-normal border border-variant border-solid rounded-[5px]">
                     Log Out
                 </button>
             </div>

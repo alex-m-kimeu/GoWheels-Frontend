@@ -6,13 +6,13 @@ import routes from './routes';
 import AuthWrapper from "./AuthWrapper";
 
 const MainLayout = ({ children }) => (
-  <>
+  <div className="flex flex-col min-h-screen">
     <Navbar />
-    <div>
+    <div className="flex-grow">
       {children}
     </div>
     <Footer />
-  </>
+  </div>
 );
 
 export const App = () => {
