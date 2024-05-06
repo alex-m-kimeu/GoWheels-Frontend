@@ -11,14 +11,14 @@ const links = [
 
 export const Footer = () => {
     return (
-        <footer className="px-[20px] md:px-0 py-5 bg-gray-100">
+        <footer className="px-[20px] md:px-0 py-5 bg-gray-100 mt-10 md:mt-20">
             <div className="flex flex-col sm:flex-row justify-center mx-auto text-center">
                 <div className="flex-grow mb-3 sm:mb-0">
                     <img src={logo} alt="logo" className="mb-4 mx-auto" />
                     <p className="mb-4 text-paragraph text-sm font-normal w-full sm:w-64 mx-auto">Wherever the Road Takes You, Let Us Be Your Reliable Companion - With Our Dedication to Excellence and Passion for Adventure, Your Journey Begins and Ends with Us.</p>
                     <div className="flex gap-2 items-center mb-4 justify-center">
-                        <AiOutlineMail className="fill-h1" />
-                        <h2 className="text-secondary text-sm md:text-base font-medium">gowheels@gmail.com</h2>
+                        <AiOutlineMail className="fill-secondary" />
+                        <h2 className="text-h2 text-sm md:text-base font-medium cursor-pointer hover:text-secondary">gowheels@gmail.com</h2>
                     </div>
                 </div>
                 <div className="flex-grow mb-4 sm:mb-0">

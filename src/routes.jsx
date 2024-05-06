@@ -20,12 +20,6 @@ const routes = [
         layout: "None",
     },
     {
-        path: "/",
-        Element: Home,
-        isAuthenticated: false,
-        layout: "Main",
-    },
-    {
         path: "/fleet",
         Element: Fleet,
         isAuthenticated: false,
@@ -49,6 +43,12 @@ const routes = [
         isAuthenticated: false,
         layout: "Main",
     },
+    {
+        path: "/",
+        Element: Home,
+        isAuthenticated: false,
+        layout: "Main",
+    }
 ];
 
 export default routes;
