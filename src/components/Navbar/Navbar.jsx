@@ -62,7 +62,7 @@ export const Navbar = () => {
                         Log Out
                     </button>
                 ) : (
-                    <Link to="/signin">
+                    <Link to="/sign-in">
                         <button
                             className="p-[5px] bg-primary text-link text-sm md:text-[15px] font-normal border border-variant border-solid rounded-[5px]">
                             Sign In
