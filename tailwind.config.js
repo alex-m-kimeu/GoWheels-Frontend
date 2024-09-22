@@ -10,7 +10,7 @@ export default {
         'md': '0 0 10px rgba(0, 0, 0, 0.1)',
       },
       colors: {
-        'primary': '#FFFFFF',
+        'primary': '#F3F4F6',
         'secondary': '#EA580C',
         'variant': '#000000',
         'link': '#646864',
