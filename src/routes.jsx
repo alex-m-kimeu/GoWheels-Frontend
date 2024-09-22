@@ -8,13 +8,13 @@ import { Faq } from "./pages/FAQ/Faq";
 
 const routes = [
     {
-        path: "/signin",
+        path: "/sign-in",
         Element: SignIn,
         isAuthenticated: false,
         layout: "None",
     },
     {
-        path: "/signup",
+        path: "/sign-up",
         Element: SignUp,
         isAuthenticated: false,
         layout: "None",

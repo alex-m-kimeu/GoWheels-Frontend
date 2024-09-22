@@ -12,14 +12,14 @@ export default {
       colors: {
         'primary': '#FFFFFF',
         'secondary': '#EA580C',
-        'variant': '#3e413e',
+        'variant': '#000000',
         'link': '#646864',
-        'h1': '#323432',
+        'text': '#4B5563',
         'h2': '#575b57',
         'paragraph': '#646864',
       },
       fontFamily:{
-        'body':"Poppins, sans-serif",
+        'body':"Nunito Sans, sans-serif",
       }
     },
   },
