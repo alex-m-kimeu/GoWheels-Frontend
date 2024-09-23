@@ -11,24 +11,24 @@ const links = [
 
 export const Footer = () => {
     return (
-        <footer className="px-[20px] md:px-0 py-5 bg-gray-100">
-            <div className="flex flex-col sm:flex-row justify-center mx-auto text-center">
-                <div className="flex-grow mb-3 sm:mb-0">
-                    <img src={logo} alt="logo" className="mb-4 mx-auto" />
-                    <p className="mb-4 text-paragraph text-sm font-normal w-full sm:w-64 mx-auto">Wherever the Road Takes You, Let Us Be Your Reliable Companion - With Our Dedication to Excellence and Passion for Adventure, Your Journey Begins and Ends with Us.</p>
-                    <div className="flex gap-2 items-center mb-4 justify-center">
+        <footer className="px-[20px] lg:px-[120px] py-[20px] bg-primary">
+            <div className="flex flex-col md:flex-row gap-[16px] md:gap-0 justify-between text-center">
+                <div className="flex flex-col items-center gap-[12px]">
+                    <img src={logo} alt="logo"/>
+                    <p className=" text-text text-[14px] md:text-[16px] font-normal w-full sm:w-64 mx-auto">Wherever the Road Takes You, Let Us Be Your Reliable Companion - With Our Dedication to Excellence and Passion for Adventure, Your Journey Begins and Ends with Us.</p>
+                    <div className="flex gap-[12px] items-center justify-center">
                         <AiOutlineMail className="fill-secondary" />
-                        <h2 className="text-h2 text-sm md:text-base font-medium cursor-pointer hover:text-secondary">gowheels@gmail.com</h2>
+                        <h2 className="text-text text-[14px] md:text-[16px] font-medium cursor-pointer hover:text-secondary">gowheels@gmail.com</h2>
                     </div>
                 </div>
-                <div className="flex-grow mb-4 sm:mb-0">
-                    <h1 className="mb-3 text-h1 text-base md:text-xl font-bold">Company</h1>
-                    <ul className='text-link text-sm md:text-base'>
+                <div className="flex flex-col items-center gap-[12px]">
+                    <h1 className="text-text text-[18px] md:text-[22px] lg:text-[24px] font-bold">Company</h1>
+                    <ul className='text-text text-[14px] md:text-[16px]'>
                         {links.map((link) => (
-                            <li key={link.id} className="mb-2">
+                            <li key={link.id} className="mb-[12px]">
                                 <NavLink
                                     to={link.path}
-                                    className='text-link hover:text-secondary'
+                                    className='text-text hover:text-secondary cursor-pointer'
                                 >
                                     {link.name}
                                 </NavLink>
@@ -36,16 +36,16 @@ export const Footer = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="flex-grow">
-                    <h1 className="mb-3 text-h1 text-base md:text-xl font-bold">Working Hours</h1>
-                    <ul className="text-link text-sm md:text-base">
-                        <li className="mb-2">Mon - Fri: 8:00AM - 8:00PM</li>
-                        <li className="mb-2">Sat: 10:00AM - 10:00PM</li>
-                        <li>Sun: Closed</li>
+                <div className="flex flex-col items-center gap-[12px]">
+                    <h1 className="text-text text-[18px] md:text-[22px] lg:text-[24px] font-bold">Working Hours</h1>
+                    <ul className="text-text text-[14px] md:text-[16px]">
+                        <li className="mb-[12px]">Mon - Fri: 8:00AM - 8:00PM</li>
+                        <li className="mb-[12px]">Sat: 10:00AM - 10:00PM</li>
+                        <li>Sun: <span className="text-secondary">Closed</span></li>
                     </ul>
                 </div>
             </div>
-            <p className="text-paragraph text-sm font-thin text-center mt-4">© 2024 GoWheels. All rights reserved.</p>
+            <p className="text-secondary text-[14px] md:text-[16px] font-normal text-center mt-[16px] md:mt-[20px]">© 2024 GoWheels. All rights reserved.</p>
         </footer>
     );
 };

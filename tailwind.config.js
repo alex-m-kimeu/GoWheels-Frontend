@@ -20,7 +20,12 @@ export default {
       },
       fontFamily:{
         'body':"Nunito Sans, sans-serif",
-      }
+      },
+      screens: {
+        'sm': '640px', 
+        'md': '768px', 
+        'lg': '1025px',
+      },
     },
   },
   plugins: [],

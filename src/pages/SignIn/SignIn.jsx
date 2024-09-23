@@ -5,14 +5,14 @@ import track from "../../assets/track.png";
 export const SignIn = () => {
 
     return (
-        <div className='flex items-center justify-center min-h-screen bg-primary'
+        <div className='flex items-center justify-center min-h-screen bg-white'
             style={{
                 backgroundImage: `url(${track})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center center'
             }}>
-            <div className='flex flex-col p-6 gap-5 md:gap-6 h-auto w-[350px] md:w-[400px] bg-primary rounded-[8px] shadow-md'>
+            <div className='flex flex-col p-6 gap-5 md:gap-6 h-auto w-[350px] md:w-[400px] bg-white rounded-[8px] shadow-md'>
                 <div className='flex flex-col justify-center items-center gap-2'>
                     <img src={logo} alt="Logo" />
                     <h1 className='text-[18px] md:text-[24px] font-bold text-text'>Drive Your Dreams</h1>

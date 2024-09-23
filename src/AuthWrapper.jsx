@@ -7,7 +7,7 @@ const AuthWrapper = ({ children }) => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
-      return navigate("/signin");
+      return navigate("/sign-in");
     }
   }, [isAuthenticated, navigate]);
 
