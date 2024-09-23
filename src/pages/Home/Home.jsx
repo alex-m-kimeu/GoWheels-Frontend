@@ -13,13 +13,13 @@ export const Home = () => {
                 <h1 className="text-[18px] md:text-[22px] lg:text-[24px] text-secondary font-bold">Service</h1>
                 <p className="text-[14px] md:text-[16px] text-text font-normal text-wrap text-center">Drive Your Dreams: Where Every Mile Feels Like a Journey!</p>
             </div>
-            <div className="w-[350px] h-auto md:w-[550px] lg:w-[800px] object-contain">
+            <div className="w-auto h-auto md:w-[550px] lg:w-[800px] object-contain">
                 <img src={bg} alt="bg-image" />
             </div>
             <div className="flex flex-col items-center justify-center gap-[8px] lg:gap-[12px]">
                 <h1 className="text-[18px] md:text-[22px] lg:text-[24px] text-text font-bold">Discover The Perfect Ride For You</h1>
                 <p className="text-[14px] md:text-[16px] text-text font-normal">Find what fits you</p>
-                <div className="flex flex-col gap-[18px] w-auto">
+                <div className="flex flex-col gap-[12px] md:gap-[18px] w-auto lg:w-[800px]">
                     <h2 className="text-[15px] md:text-[18px] text-variant font-semibold">Search vehicle</h2>
                     <p className="text-[14px] md:text-[16px] text-text font-normal">
                         Simply write the vehicle name and press the search button (i.e BMW or Audi)
@@ -46,14 +46,14 @@ export const Home = () => {
             </div>
             <div className="flex flex-col items-center justify-center gap-[6px] lg:gap-[12px]">
                 <div className="flex flex-col gap-[10px] text-center">
-                    <h1 className="text-[18px] md:text-[22px] lg:text-[24px] text-text font-bold">Rev up your adventure</h1>
+                    <h1 className="text-[18px] md:text-[22px] text-text font-bold">Rev up your adventure</h1>
                     <p className="text-[14px] md:text-[16px] text-text font-normal">Quick & easy car rental</p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-auto md:gap-[50px] lg:gap-[120px] p-0 md:p-[20px]">
                     <div className="flex flex-col justify-center items-center gap-[4px] md:gap-[12px] w-auto lg:w-[250px] h-[auto]">
                         <img className="w-[174px] h-[174px] object-contain" src={car} alt="icon_img" />
-                        <div className="text-center">
-                            <h1 className="text-[18px] md:text-[22px] lg:text-[24px] text-text font-bold">Select Car</h1>
+                        <div className="text-center space-y-2">
+                            <h1 className="text-[18px] md:text-[22px] text-text font-bold">Select Car</h1>
                             <p className="text-[14px] md:text-[16px] text-text font-normal text-wrap">
                                 We offers a big range of vehicles for all your driving needs. We have the perfect car to meet your needs.
                             </p>
@@ -61,8 +61,8 @@ export const Home = () => {
                     </div>
                     <div className="flex flex-col justify-center items-center gap-[4px] md:gap-[12px] w-auto lg:w-[250px] h-[auto]">
                         <img className="w-[174px] h-[174px] object-contain" src={operator} alt="icon_img" />
-                        <div className="text-center">
-                            <h1 className="text-[18px] md:text-[22px] lg:text-[24px] text-text font-bold">Contact Operator</h1>
+                        <div className="text-center space-y-2">
+                            <h1 className="text-[18px] md:text-[22px] text-text font-bold">Contact Operator</h1>
                             <p className="text-[14px] md:text-[16px] text-text font-normal text-wrap">
                                 Our knowledgeable and friendly operators are always ready to help with any questions or concerns.
                             </p>
@@ -70,7 +70,7 @@ export const Home = () => {
                     </div>
                     <div className="flex flex-col justify-center items-center gap-[4px] md:gap-[12px] w-auto lg:w-[250px] h-[auto]">
                         <img className="w-[174px] h-[174px] object-contain" src={drive} alt="icon_img" />
-                        <div className="text-center">
+                        <div className="text-center space-y-2">
                             <h1 className="text-[18px] md:text-[22px] lg:text-[24px] text-text font-bold">Let's Drive</h1>
                             <p className="text-[14px] md:text-[16px] text-text font-normal text-wrap">
                                 Whether you're hitting the open road, we've got you covered with our wide range of cars.
