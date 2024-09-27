@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import person from "../../assets/contact.jpg";
 import { Link } from "react-router-dom";
-import countryCodesData from '../../data/codes.json';
+import data from '../../data/data.json';
 
 export const Contact = () => {
   const [countryCodes, setCountryCodes] = useState([]);
@@ -10,7 +10,7 @@ export const Contact = () => {
 
   useEffect(() => {
     const fetchCountryCodes = () => {
-      const codes = countryCodesData.map(country => ({
+      const codes = data.countryCodes.map(country => ({
         name: country.name,
         code: country.code,
         dial_code: country.dial_code

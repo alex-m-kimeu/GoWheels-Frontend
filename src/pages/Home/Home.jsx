@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import bg from "../../assets/bg.png";
 import car from "../../assets/car.png";
 import operator from "../../assets/operator.png";

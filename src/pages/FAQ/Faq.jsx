@@ -1,9 +1,24 @@
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import data from '../../data/data.json';
+import jaguar from '../../assets/jaguar-back.png';
 
 export const Faq = () => {
+    const [faqs, setFaqs] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(null);
+
+    useEffect(() => {
+        const fetchFaqs = () => {
+            const faqsData = data.FAQs.map(faq => ({
+                question: faq.question,
+                answer: faq.answer
+            }));
+            setFaqs(faqsData);
+        };
+
+        fetchFaqs();
+    }, []);
 
     const handleClick = (index) => {
         if (selectedQuestion === index) {
@@ -13,70 +28,57 @@ export const Faq = () => {
         }
     };
 
-    const faqs = [
-        {
-            question: "1. How do I find the best car rental deals?",
-            answer: "You can find car rental deals by researching online and comparing prices from different rental companies. Websites such as Expedia and Kayak allow you to compare prices and view available rental options. It is also recommended to sign up for email newsletters and follow rental car companies on social media to be informed of any special deals or promotions."
-        },
-        {
-            question: "2. How can I get the lowest rental car prices?",
-            answer: "Booking in advance can often result in lower prices. Compare prices from multiple companies using websites like Kayak or Expedia. Look for discount codes and coupons to further reduce the rental price. Renting from an off-airport location can sometimes result in lower prices as well."
-        },
-        {
-            question: "3. Why is it important to compare rental car deals?",
-            answer: "Comparing rental car deals is essential as it helps you find the best deal that fits your budget and requirements, ensuring you get the most value for your money. By comparing various options, you can find deals that offer lower prices, additional services, or better car models."
-        },
-        {
-            question: "4. What factors should I consider when renting a car?",
-            answer: "When renting a car, consider factors such as the rental company's reputation, the type of car you need, rental duration, mileage limits, fuel policies, insurance coverage, additional fees, and any restrictions or requirements."
-        },
-        {
-            question: "5. How do I know if I need rental car insurance?",
-            answer: "Check with your personal auto insurance provider to see if rental car coverage is included in your policy. If not, consider purchasing insurance from the rental car company, or through a third-party provider. Evaluate the coverage options and costs to determine if it's necessary for your rental."
-        }, {
-            question: "6. What should I do if the rental car breaks down?",
-            answer: "If the rental car breaks down, you should immediately contact the rental company. They will provide instructions on what to do next. Most rental companies offer roadside assistance as part of their service."
-        },
-        {
-            question: "7. Can I extend my rental period?",
-            answer: "Yes, most rental companies allow you to extend your rental period. However, you should contact the company as soon as you know you need to extend to ensure the car is still available and to discuss any additional fees."
-        },
-        {
-            question: "8. Can I drop off the rental car at a different location?",
-            answer: "This depends on the rental company. Some companies allow one-way rentals where you can drop off the car at a different location, while others require you to return the car to the same location where you picked it up. Check with the rental company for their specific policies."
-        },
-        {
-            question: "9. What happens if I return the car late?",
-            answer: "If you return the car late, you may be charged for an extra day's rental. Some companies have a grace period for late returns, but this varies by company. It's best to return the car on time to avoid any additional charges."
-        },
-        {
-            question: "10. Can I add an additional driver to my rental?",
-            answer: "Yes, most rental companies allow you to add an additional driver to your rental. However, there may be additional fees, and the additional driver must meet the same rental requirements as the primary driver."
-        }
-
-    ];
-
-
     return (
-        <section className="flex justify-center">
-            <div className="w-full max-w-2xl p-8">
-                <div className="flex justify-center items-center text-xl font-bold">
-                    <Link to="/" className="mr-2 text-secondary">Home</Link>
-                    <span className="mx-2">/</span>
-                    <h1 className="text-center text-h1">FAQ</h1>
+        <section className="flex flex-col px-[20px] md:px-[40px] lg:px-[120px] gap-[20px] lg:gap-[40px] py-[20px] lg:py-[40px] items-center justify-center">
+            <div className="flex flex-col lg:flex-row justify-center gap-[20px] lg:gap-[80px] w-full">
+                <div className="flex flex-col gap-[50px] w-auto lg:w-[400px] justify-center">
+                    <div className="flex flex-col items-center gap-[8px]">
+                        <div className="flex gap-[6px] font-bold text-[18px] md:text-[22px] lg:text-[24px]">
+                            <Link to="/" className="text-secondary">Home</Link>
+                            <span className="text-text">/</span>
+                            <h1 className="text-text">FAQs</h1>
+                        </div>
+                        <h2 className="text-text text-[14px] md:text-[16px] font-normal">Frequently Asked Questions</h2>
+                    </div>
+                    <img src={jaguar} alt="jaguar-car" className="hidden lg:block" />
                 </div>
-                <h2 className="text-base mb-2 text-center text-h2">Frequently Asked Questions</h2>
-                <div className="shadow-md p-4 mt-5">
+                <div className="shadow-md px-[16px] w-auto lg:w-[800px]">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="border-b border-white py-4">
+                        <div key={index} className="border-b border-white py-[12px]">
                             <div className="flex justify-between items-center cursor-pointer" onClick={() => handleClick(index)}>
-                                <p className={`font-semibold text-base ${selectedQuestion === index ? 'text-secondary' : 'text-h2'}`}>{faq.question}</p>
-                                <RiArrowDropDownLine className={`transform transition-transform duration-200 fill-h2 w-6 h-6 ${selectedQuestion === index ? 'rotate-180' : ''}`} />
+                                <p className={`font-semibold text-base ${selectedQuestion === index ? 'text-secondary' : 'text-text'}`}>{faq.question}</p>
+                                <RiArrowDropDownLine className={`transform transition-transform duration-200 w-6 h-6 ${selectedQuestion === index ? 'rotate-180 fill-secondary' : 'fill-text'}`} />
                             </div>
-                            {selectedQuestion === index && <p className="mt-2 text-paragraph font-light text-normal">{faq.answer}</p>}
+                            {selectedQuestion === index && <p className="mt-2 text-text font-normal">{faq.answer}</p>}
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="w-full bg-primary flex flex-col justify-center items-center p-[30px] gap-[15px] rounded-[8px]">
+                <div className="flex -space-x-2 overflow-hidden">
+                    <img
+                        alt=""
+                        src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        className="inline-block h-[45px] w-[45px] md:h-[56px] md:w-[56px] rounded-full"
+                    />
+                    <img
+                        alt=""
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        className="inline-block h-[45px] w-[45px] md:h-[56px] md:w-[56px] rounded-full"
+                    />
+                    <img
+                        alt=""
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        className="inline-block h-[45px] w-[45px] md:h-[56px] md:w-[56px] rounded-full"
+                    />
+                </div>
+                <div className="text-center space-y-[8px]">
+                    <h1 className="text-[18px] md:text-[22px] lg:text-[24px] text-text font-bold">Still have questions?</h1>
+                    <p className="text-[14px] md:text-[16px] text-text font-normal">Can't find the answer you're looking for? Please chat to our friendly team.</p>
+                </div>
+                <button className="bg-variant font-normal text-[15px] text-white p-[5px] rounded-[5px]">
+                    <Link to='/contact'>Get in touch</Link>
+                </button>
             </div>
         </section>
     );
